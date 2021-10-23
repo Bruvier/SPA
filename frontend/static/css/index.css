@@ -1,0 +1,268 @@
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 210px;
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: center;
+  border-radius: 9px;
+  padding: 1px 0;
+  font-size: 16px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  background-color: rgba(34,34,34,0.8);
+}
+
+#app {
+    margin: 2em;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background: #23232e;
+  height: 8vh;
+}
+
+.background_image {
+  background: url("./../images/bg.jpg") repeat center center;
+  background-size: cover;
+  height: 92vh;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  transition: 0.3s;
+}
+
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 50vw;
+    height: 92vh;
+    background: #23232e;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+    z-index: 1;
+  }
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+    z-index: 1;
+  }
+  .mobile-menu {
+    display: block;
+    z-index: 1;
+  }
+}
+
+.nav-list.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+
+img.grayscale {
+    filter:  gray;
+    -webkit-filter:  grayscale(1);
+    filter: grayscale(1);
+    width: 210px;
+    height: 315px;
+}
+
+img.grayscale:hover {
+    -webkit-filter:  grayscale(0);
+    filter: none;
+}
+
+div.item {
+    background-color: #ffffcc;
+    transition: transform .09s;
+    height: 315px;
+    width: 210px;
+    text-align: center;
+    float: left;
+    margin: 20px;
+    background-color: transparent !important;
+}
+
+div.item:hover {
+    transform:  scale(1.22);
+    -webkit-transition: all 0.50s;
+    transition: all 0.50s;
+}
+
+.container{
+  max-width: auto;
+  margin: auto;
+}
+
+.gallery{
+  width: 100%;
+  float: left;
+  padding:30px 15px;
+}
+
+.gallery .title h1 {
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #ffffcc;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #ffff99;
+}
+
+.title h1 {
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #ffffcc;
+    height: 50px;
+    text-align: center;
+    border: 1px solid #ffff99;
+}
+
+p {
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #ffffcc;
+    height: 20px;
+    text-align: center;
+    color: #000;
+}
+
+.conteudolink {
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 25;
+    background-color: #ffffad;
+    height: 10vh;
+    width: 10vh;
+    color: #000;
+}
+
+.contato_div_header h1 {
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #ffffcc;
+    height: 45px;
+    width: 190px;
+    margin: 150px auto;
+    padding: auto auto;
+    border: 1px solid #ffff99;
+    border-radius: 50px;
+}
+
+.contato_border {
+  width: 200px;
+  height: 50px;
+  margin: auto auto;
+  background: #ffffb9;
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: center;
+  border-radius: 9px;
+  padding: auto auto;
+  font-size: 16px;
+}
+
+.contato_border_lines {
+  text-align: center;
+  border-radius: 22px;
+  font-size: 23px;
+  color: #000;
+  width: 100%;
+  height: 1px;
+  background: #000;
+  margin: auto auto;
+}
+
+.contato_border_lines_p {
+  background-color: #ffffc2;
+  font-family: sans-serif;
+  border-radius: 100px;
+  background: #ffffb9;
+}
