@@ -1,0 +1,48 @@
+<html ng-app="app">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="content-language" content="pt-br" />
+
+        <title>Single Page Application</title>
+
+        <script src="/static/js/views/info.json" type="application/json"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+        <!-- my css -->
+        <link rel="stylesheet" href="/static/css/index.css">
+   </head>
+ 
+    <body class="background_image">
+
+        <header>
+          <nav>
+            <a class="logo" href="/">single page application</a>
+            <div class="mobile-menu">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+              <li class="nav_link"><a href="/"data-link>Home</a></li>
+              <li class="nav_link"><a href="/conteudo"data-link>Conteúdo</a></li>
+              <li class="nav_link"><a href="/contato"data-link>Contato</a></li>
+            </ul>
+          </nav>
+        </header>
+        <main></main>
+        <script src="/static/js/mobile-navbar.js"></script>
+
+        <!-- renderiza os templates -->
+        <div id="app">
+        </div>
+        <script type="module" src="/static/js/index.js"></script>
+        <!--
+        <script type="module" src="/static/js/web_scraper.js"></script>
+        -->
+        <footer class="text-center">
+        </footer>
+   </body>
+</html>
